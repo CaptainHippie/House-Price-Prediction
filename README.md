@@ -10,7 +10,6 @@ A machine learning model to predict house prices based on various attributes. Bu
 - **Mean Absolute Error**: *72648*, which is *35.08%* of standard deviation
 - **Mean Squared Error**: *10919533397*  
 
-- 
 ## Run Locally
 🔹 **Prerequisites:** Python installed\
 🔹 **Install Dependencies:**
