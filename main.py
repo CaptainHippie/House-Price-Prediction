@@ -5,15 +5,14 @@ from fastapi.responses import HTMLResponse
 from pathlib import Path
 from typing import Optional
 
-from .schemas import HousePredictionInput
-from .model import predict_price
+from schemas import HousePredictionInput
+from model import predict_price
 
 app = FastAPI(title="House Price Prediction")
 
 # Set up templates and static files
-BASE_DIR = Path(__file__).resolve().parent.parent
-templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
-app.mount("/static", StaticFiles(directory=str(BASE_DIR / "app" / "static")), name="static")
+templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
